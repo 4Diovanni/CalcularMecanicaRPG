@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPG Calculadora</title>
+    <link rel="stylesheet" href="Css.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>RPG Calculadora</h1>
+        <div class="organizar">
+        <div class="atribu" id="atributos">
+            <h2>Atributos</h2>
+            <div>
+                <label for="velocidade">Velocidade:</label>
+                <input type="number" id="velocidade" min="1">
+                <label for="bonusVelocidade">Bônus:</label>
+                <input type="number" id="bonusVelocidade" min="0">
+            </div>
+            <div>
+                <label for="conhecimento">Conhecimento:</label>
+                <input type="number" id="conhecimento" min="1">
+                <label for="bonusConhecimento">Bônus:</label>
+                <input type="number" id="bonusConhecimento" min="0">
+            </div>
+            <div>
+                <label for="vontade">Vontade:</label>
+                <input type="number" id="vontade" min="1">
+                <label for="bonusVontade">Bônus:</label>
+                <input type="number" id="bonusVontade" min="0">
+            </div>
+            <div>
+                <label for="defesa">Defesa:</label>
+                <input type="number" id="defesa" min="1">
+                <label for="bonusDefesa">Bônus:</label>
+                <input type="number" id="bonusDefesa" min="0">
+            </div>
+            <div>
+                <label for="forca">Força:</label>
+                <input type="number" id="forca" min="1">
+                <label for="bonusForca">Bônus:</label>
+                <input type="number" id="bonusForca" min="0">
+            </div>
+            <div>
+                <label for="destreza">Destreza:</label>
+                <input type="number" id="destreza" min="1">
+                <label for="bonusDestreza">Bônus:</label>
+                <input type="number" id="bonusDestreza" min="0">
+            </div>
+            <div>
+                <label for="fortitude">Fortitude:</label>
+                <input type="number" id="fortitude" min="1">
+                <label for="bonusFortitude">Bônus:</label>
+                <input type="number" id="bonusFortitude" min="0">
+            </div>
+            <div>
+                <label for="sorte">Sorte:</label>
+                <input type="number" id="sorte" min="1">
+                <label for="bonusSorte">Bônus:</label>
+                <input type="number" id="bonusSorte" min="0">
+            </div>
+            <div>
+                <label for="constituicao">Constituição:</label>
+                <input type="number" id="constituicao" min="1">
+                <label for="bonusConstituicao">Bônus:</label>
+                <input type="number" id="bonusConstituicao" min="0">
+            </div>
+        </div>
+        <div class="separar">
+            <button onclick="calcular()">Calcular</button>
+            <div id="resultados">
+                <!-- Aqui serão exibidos os resultados -->
+            </div>
+            <button onclick="calcularPericias()">Pericias</button>
+            <div id="resultadosPericias">
+                <!-- Aqui serão exibidos os resultados -->
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script src="Js.js"></script>
+    <script src="calcularPericias.js"></script>
+</body>
+
+</html>
