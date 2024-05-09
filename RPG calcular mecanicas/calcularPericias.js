@@ -10,22 +10,28 @@ function calcularPericias() {
     const sorte = parseInt(document.getElementById('sorte').value) || 0;
     const constituicao = parseInt(document.getElementById('constituicao').value) || 0;
 
-    // Calculando as perícias
-    const intuicao = Math.ceil((sorte + vontade) / 15);
-    const sobrevivencia = Math.ceil((constituicao + sorte) / 12);
-    const carisma = Math.ceil((conhecimento + sorte) / 10);
-    const aprendizado = Math.ceil((conhecimento + fortitude) / 12);
-    const arcanismo = Math.ceil((conhecimento + fortitude) / 15);
-    const intimidacao = Math.ceil((forca + vontade) / 18);
-    const natureza = Math.ceil((conhecimento + sorte) / 15);
-    const percepcao = Math.ceil((intuicao + vontade) / 12);
-    const persuasao = Math.ceil((carisma + sorte) / 15);
-    const religiao = Math.ceil((conhecimento + vontade) / 18);
-    const furtividade = Math.ceil((destreza + arcanismo) / 12);
-    const iniciativa = Math.ceil((sorte + velocidade) / 14);
-    const adestrar = Math.ceil((destreza + aprendizado) / 8);
-    const acrobacias = Math.ceil((destreza + velocidade) / 12);
-    const inteligencia = Math.ceil((conhecimento + vontade) / 18);
+     // Função para limitar o valor máximo das perícias
+     function limitarMaximo(valor, maximo) {
+        return valor > maximo ? maximo : valor;
+    }
+
+    // Calculando as perícias e limitando o valor máximo a 8
+    const intuicao = limitarMaximo(Math.ceil((sorte + vontade) / 15), 8);
+    const sobrevivencia = limitarMaximo(Math.ceil((constituicao + sorte) / 12), 8);
+    const carisma = limitarMaximo(Math.ceil((conhecimento + sorte) / 10), 8);
+    const aprendizado = limitarMaximo(Math.ceil((conhecimento + fortitude) / 12), 8);
+    const arcanismo = limitarMaximo(Math.ceil((conhecimento + fortitude) / 15), 8);
+    const intimidacao = limitarMaximo(Math.ceil((forca + vontade) / 18), 8);
+    const natureza = limitarMaximo(Math.ceil((conhecimento + sorte) / 15), 8);
+    const percepcao = limitarMaximo(Math.ceil((intuicao + vontade) / 12), 8);
+    const persuasao = limitarMaximo(Math.ceil((carisma + sorte) / 15), 8);
+    const religiao = limitarMaximo(Math.ceil((conhecimento + vontade) / 18), 8);
+    const furtividade = limitarMaximo(Math.ceil((destreza + arcanismo) / 12), 8);
+    const iniciativa = limitarMaximo(Math.ceil((sorte + velocidade) / 14), 8);
+    const adestrar = limitarMaximo(Math.ceil((destreza + aprendizado) / 8), 8);
+    const acrobacias = limitarMaximo(Math.ceil((destreza + velocidade) / 12), 8);
+    const inteligencia = limitarMaximo(Math.ceil((conhecimento + vontade) / 18), 8);
+
 
     // Exibindo os resultados das perícias
     const resultadosPericiasDiv = document.getElementById('resultadosPericias');
